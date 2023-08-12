@@ -22,7 +22,7 @@ def index() -> rx.Component:
         rx.vstack(
             rx.link(
                 "Log in with vk",
-                href="https://oauth.vk.com/authorize?client_id=51724129&redirect_uri=http://localhost:3000/vk-auth/&scope=2",
+                href="https://oauth.vk.com/authorize?client_id=51724129&redirect_uri=https://skemta.ru/vk-auth/&scope=2",
                 border="0.1em solid",
                 padding="0.5em",
                 border_radius="0.5em",
@@ -44,7 +44,7 @@ async def getVKFreinds(request):
     try:
         code = request.rel_url.query.get('code')
         print(1)
-        data = requests.get("https://oauth.vk.com/access_token?client_id=51724129&client_secret=M7lZNCwJ0IEWWNMhCBu0&redirect_uri=http://localhost:3000/vk-auth/" + code).json()
+        data = requests.get("https://oauth.vk.com/access_token?client_id=51724129&client_secret=M7lZNCwJ0IEWWNMhCBu0&redirect_uri=https://skemta.ru/vk-auth/" + code).json()
         vk_token = data['access_token']
         API = vkbottle.API(vk_token)
         vk_id = data['user_id']

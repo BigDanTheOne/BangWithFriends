@@ -5,6 +5,7 @@ class BangwithfriendsConfig(rx.Config):
 
 config = BangwithfriendsConfig(
     app_name="BangWithFriends",
+    api_url="https://skemta.ru",
     db_url="sqlite:///reflex.db",
     env=rx.Env.DEV,
 )
