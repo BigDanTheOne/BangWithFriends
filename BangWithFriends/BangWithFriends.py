@@ -91,9 +91,7 @@ async def getVKFreinds(request):
         vk_id = data["user_id"]
         friends = {}
         for friend in (
-            await API.friends.get(
-                user_id=vk_id, order="name", fields=["nickname", "photo_400_orig"]
-            )
+            await API.friends.get(user_id=vk_id, order="name", fields=["nickname", "photo_400_orig"])
         ).items:
             if friend.deactivated:
                 continue
