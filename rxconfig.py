@@ -1,7 +1,9 @@
 import reflex as rx
 
+
 class BangwithfriendsConfig(rx.Config):
     pass
+
 
 config = BangwithfriendsConfig(
     app_name="BangWithFriends",

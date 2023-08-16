@@ -1,4 +1,6 @@
 *.py[cod]
+.idea/
 .web
+/venv
 __pycache__/
 reflex.db
