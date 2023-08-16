@@ -77,7 +77,7 @@ def index() -> rx.Component:
     )
 
 
-async def getVKFreinds(request):
+async def get_vk_friends(request):
     print(1)
     try:
         code = request.rel_url.query.get("code")
@@ -107,6 +107,6 @@ async def getVKFreinds(request):
 
 
 app = rx.App()
-app.api.add_api_route("/vk-auth/", getVKFreinds)
+app.api.add_api_route("/vk-auth/", get_vk_friends)
 app.add_page(index)
 app.compile()
