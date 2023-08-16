@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 119
-required-version = "22.7.0"
+required-version = "23.7.0"
 
 [tool.isort]
 profile = "black"
